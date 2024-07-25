@@ -1,0 +1,31 @@
+{
+  "name": "advancespath",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "testExplorer": "npx cypress open",
+    "testRun": "npx cypress run -spec \"./cypress/e2e/exercises/framework_fixture_commands.spec.js\" --headed --browser chrome --env url=\"https://rahulshettyacademy.com\"",
+    "headedMode": "npx cypress run --headed",
+    "chromeTest": "npx cypress run --browser chrome"
+  },
+  "cypress-cucumber-preprocessor": {
+    "json": {
+      "enabled": true,
+      "output": "cypress/cucumberReports/results.json"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.13.0",
+    "cypress-iframe": "^1.0.1",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "multiple-cucumber-html-reporter": "^3.7.0",
+    "neat-csv": "^7.0.0"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.1.0",
+    "@cypress/browserify-preprocessor": "latest"
+  }
+}
